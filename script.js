@@ -1,8 +1,8 @@
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var randomButton = document.getElementById("randomButton");
+const css = document.querySelector("h3");
+const color1 = document.querySelector(".color1");
+const color2 = document.querySelector(".color2");
+const body = document.getElementById("gradient");
+const randomButton = document.getElementById("randomButton");
 
 function setGradient() {
   body.style.background =
@@ -12,17 +12,17 @@ function setGradient() {
 }
 
 function randomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
+  const letters = "0123456789ABCDEF";
+  const color = "#";
+  for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return(color);
 }
 
 function setRandomGradient() {
-  var randomColor1 = randomColor();
-  var randomColor2 = randomColor();
+  const randomColor1 = randomColor();
+  const randomColor2 = randomColor();
   body.style.background =
     "linear-gradient(to right, " + randomColor1 + "," + randomColor2 + ")";
 
